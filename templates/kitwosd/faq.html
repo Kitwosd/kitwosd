@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>FAQ</title> {% endblock title %}
+
+{% block content %}
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">F.A.Q</p>
+                <h1 class="custom-fs-39 custom-fw-700">Frequestly Asked Questions</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item">FAQS</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section  -->
+    <section>
+        <div class="container">
+            <div class="accordion faq-accordion accordion-flush row" id="accordionFlushExample">
+                <div class="row">
+                    <div class="col-lg-6 ">
+                        <div class="accordion-item  mb-4">
+                            <h2 class="accordion-header custom-bg-light-gray" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    {{faq_data.question}}
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    {{faq_data.answer}}
+                                </div>
+                            </div>
+                        </div>
+                        {% comment %} <div class="accordion-item  mb-4">
+                            <h2 class="accordion-header custom-bg-light-gray" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Lorem ipsum dolor sit.
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headiThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    <code>Facilis,</code> placeat!
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock content%}

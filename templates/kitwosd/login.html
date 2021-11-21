@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>About-Us</title> {% endblock title %}
+
+{% block content %}
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="custom-fs-39 custom-fw-700">Sign In</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item">Sign In</li>
+
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section  -->
+    <section>
+        <div class="container">
+            <h2 class="custom-fs-36 custom-text-black custom-fw-700 my-3">Login</h2>
+            <form action="#" class="row">
+                <div class="form-wrap col-12">
+                    <label for="email" class="custom-fs-14 custom-text-light mb-2">Email
+                        *</label>
+                    <input type="email" id='email' class="form-control mb-3 p-3 rounded-0" required>
+                </div>
+                <div class="form-wrap col-12">
+                    <label for="password" class="custom-fs-14 custom-text-light mb-2">Password *</label>
+                    <input type="password" id='password' class="form-control mb-3 p-3 rounded-0" required>
+                </div>
+                <div class="col-12 mb-3">
+                    <button class="btn btn-style-1 custom-bg-primary">Log In</button>
+                </div>
+                <div class="col-md-4 mb-3 custom-fs-16">
+                    <a href="forgot.html" class="custom-text-primary">Lost your password?</a>
+                </div>
+                <div class="col-md-8 text-md-end text-start custom-fs-16 custom-text-light">
+                    Don't have an account ? <a href="register.html" class="custom-text-primary">Click Here</a> to create
+                    one
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section  -->
+{% endblock content%}

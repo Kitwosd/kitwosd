@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>About-Us</title> {% endblock title %}
+
+{% block content %}
+
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">Join The Team That’s Building</p>
+                <h1 class="custom-fs-39 custom-fw-700">Lorem ipsum dolor sit amet consectetur </h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item">Career</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section  -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 row mb-3">
+                {% for data in data %}
+                    <div class="col-12 mb-4">
+                        <div class="card job-card border-0  p-4">
+                            <a href="job-view.html" class="custom-fs-22 custom-text-primary custom-fw-600 mb-3">{{data.title}}</a>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="far fa-calendar-alt custom-text-primary me-1"></i>
+                                    Deadline:
+                                </strong>
+                                {{data.deadline}}
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-graduation-cap custom-text-primary me-1"></i>
+                                    Educational Experience:
+                                </strong>
+                                {{data.education}}
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-briefcase custom-text-primary me-1"></i>
+                                    Work Experience:
+                                </strong>
+                                3 to 4 year(s)
+                            </p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+                    {% comment %} <div class="col-12 mb-4">
+                        <div class="card job-card border-0  p-4">
+                            <a href="job-view.html" class="custom-fs-22 custom-text-primary custom-fw-600 mb-3">Lorem
+                                ipsum dolor
+                                sit.</a>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="far fa-calendar-alt custom-text-primary me-1"></i>
+                                    Deadline:
+                                </strong>
+                                31st November, 2021
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-graduation-cap custom-text-primary me-1"></i>
+                                    Educational Experience:
+                                </strong>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores perferendis eius
+                                quisquam ab similique soluta optio commodi, dignissimos ea voluptates?
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-briefcase custom-text-primary me-1"></i>
+                                    Work Experience:
+                                </strong>
+                                3 to 4 year(s)
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card job-card border-0  p-4">
+                            <a href="job-view.html" class="custom-fs-22 custom-text-primary custom-fw-600 mb-3">Lorem
+                                ipsum dolor
+                                sit.</a>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="far fa-calendar-alt custom-text-primary me-1"></i>
+                                    Deadline:
+                                </strong>
+                                31st November, 2021
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-graduation-cap custom-text-primary me-1"></i>
+                                    Educational Experience:
+                                </strong>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores perferendis eius
+                                quisquam ab similique soluta optio commodi, dignissimos ea voluptates?
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-briefcase custom-text-primary me-1"></i>
+                                    Work Experience:
+                                </strong>
+                                3 to 4 year(s)
+                            </p>
+                        </div>
+
+                    </div> {% endcomment %}
+                    {% comment %} <div class="col-12 mb-4">
+                        <div class="card job-card border-0  p-4">
+                            <a href="job-view.html" class="custom-fs-22 custom-text-primary custom-fw-600 mb-3">Lorem
+                                ipsum dolor
+                                sit.</a>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="far fa-calendar-alt custom-text-primary me-1"></i>
+                                    Deadline:
+                                </strong>
+                                31st November, 2021
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-graduation-cap custom-text-primary me-1"></i>
+                                    Educational Experience:
+                                </strong>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores perferendis eius
+                                quisquam ab similique soluta optio commodi, dignissimos ea voluptates?
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-briefcase custom-text-primary me-1"></i>
+                                    Work Experience:
+                                </strong>
+                                3 to 4 year(s)
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-12 mb-4">
+                        <div class="card job-card border-0  p-4">
+                            <a href="job-view.html" class="custom-fs-22 custom-text-primary custom-fw-600 mb-3">Lorem
+                                ipsum dolor
+                                sit.</a>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="far fa-calendar-alt custom-text-primary me-1"></i>
+                                    Deadline:
+                                </strong>
+                                31st November, 2021
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-graduation-cap custom-text-primary me-1"></i>
+                                    Educational Experience:
+                                </strong>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores perferendis eius
+                                quisquam ab similique soluta optio commodi, dignissimos ea voluptates?
+                            </p>
+                            <p class="custom-text-light custom-fs-14">
+                                <strong class="custom-text-black">
+                                    <i class="fas fa-briefcase custom-text-primary me-1"></i>
+                                    Work Experience:
+                                </strong>
+                                3 to 4 year(s)
+                            </p>
+                        </div>
+
+                    </div> {% endcomment %}
+                </div>
+                <div class="col-lg-4">
+                    <div class="custom-bg-light-gray p-4 mb-3">
+                        <form action="#" class="d-flex ">
+                            <input type="search" name="search_services" placeholder="Search Services"
+                                class="form-control rounded-0 border-0 p-3">
+                            <button class="btn custom-bg-primary rounded-0 text-white px-4">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="custom-bg-light-gray px-4 py-5 my-3">
+                        <h5 class="custom-fs-22 custom-text-dark custom-fw-700 mb-4">Job Categories</h5>
+                        <ul class="ps-0">
+                            <li class="mb-2"><a href="#" class="custom-text-black "><i
+                                        class="fas fa-caret-right custom-text-primary"></i> All</a>
+                                <hr>
+                            </li>
+                            <li class="mb-2"><a href="#" class="custom-text-black "><i
+                                        class="fas fa-caret-right custom-text-primary"></i> Web Developer</a>
+                                <hr>
+                            </li>
+                            <li class="mb-2"><a href="#" class="custom-text-black "><i
+                                        class="fas fa-caret-right custom-text-primary"></i> Web Developer</a>
+                                <hr>
+                            </li>
+                            <li class="mb-2"><a href="#" class="custom-text-black "><i
+                                        class="fas fa-caret-right custom-text-primary"></i> Web Developer</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

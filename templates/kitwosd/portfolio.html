@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>Portfolio</title> {% endblock title %}
+
+{% block content %}
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">Portfolios</p>
+                <h1 class="custom-fs-39 custom-fw-700">Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item">Portfolios</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section  -->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center filter_pagination">
+                            <li class="page-item active"><a class="page-link" href="{% url 'portfolio' %}" >All</a></li>
+                            {% for category in links %}
+                                <li class="page-item"><a class="page-link" href="{{category.get_url}}">{{category.name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
+                {% for project in projects %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card custom-text-dark project_card border-0">
+                            <div class="project_card_img">
+                                <img src="{{project.image.url}}" class="img-fluid" alt="...">
+                                {% if project.url_link %}
+                                <a href="{{project.url_link}}" class="view-more">
+                                    View More
+                                </a>
+                                {% endif %}
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-text custom-fs-22 custom-fw-600 mb-1">{{project.title}}</h2>
+                                <p class="custom-text-gray custom-fs-16">{{project.description|truncatechars:25}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <nav aria-label="Page navigation example">
+            {% if projects.has_other_pages %}
+                <ul class="pagination justify-content-center">
+                {% if projects.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{projects.previous_page_number}}" aria-label="Previous">
+                            <span aria-hidden="true">Previous</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">Previous</span>
+                        </a>
+                    </li>
+                {% endif %}
+
+                {% for i in projects.paginator.page_range %}
+                    {% if project.number == i %}
+                        <li class="page-item active"><a class="page-link" href="#">{{i}}</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if projects.has_next %}
+                    <li class="page-item active">
+                        <a class="page-link" href="?page={{projects.next_page_number}}" aria-label="Next">
+                            <span aria-hidden="true">Next</span>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">Next</span>
+                        </a>
+                    </li>
+
+                {% endif %}
+                </ul>
+            {% endif %}
+            </nav>
+        </div>
+    </section>
+
+{% endblock content%}

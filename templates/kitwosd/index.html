@@ -1,0 +1,448 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>Kitwosd</title> {% endblock title %}
+{% block content %}
+<!-- Hero Section  -->
+{% for object in object %}
+    <section class="hero">
+        <div id="particles-js">
+        </div>
+        <div class="hero-content">
+            <div class="animate__animated  animate__fadeInUp ">
+                <h3 class="custom-fs-24 mb-4">Custom Software Devlopment &</h3>
+                <h1 class="custom-fs-57 custom-fw-700 mb-5">
+                    Your Trusted
+                    Development Partner
+                </h1>
+                <a href="{% url 'portfolio' %}" class="custom-bg-primary btn-style-1 custom-fs-12">
+                    Learn More
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Feature Box Section  -->
+    <section class="feature py-0">
+        <div class="container-lg">
+            <div class="feature-wrap">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 px-0">
+                        <div class="single_feature custom-bg-dark">
+                            <div
+                                class="d-flex align-items-center justify-content-start justify-content-md-center h-100 w-100">
+                                <div class="feature_icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <h5 class="custom-fs-22 custom-fw-800">
+                                    Website Development
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 px-0">
+                        <div class="single_feature custom-bg-black">
+                            <div
+                                class="d-flex align-items-center  justify-content-startjustify-content-md-center h-100 w-100">
+                                <div class="feature_icon"><i class="fas fa-chart-pie"></i>
+                                </div>
+                                <h5 class="custom-fs-22 custom-fw-800">
+                                    Mobile Apps Development
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 px-0">
+                        <div class="single_feature custom-bg-dark">
+                            <div
+                                class="d-flex align-items-center justify-content-start justify-content-md-center h-100 w-100">
+                                <div class="feature_icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h5 class="custom-fs-22 custom-fw-800">
+                                    Customized ERP Development
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 px-0">
+                        <div class="single_feature custom-bg-black">
+                            <div
+                                class="d-flex align-items-center  justify-content-startjustify-content-md-center h-100 w-100">
+                                <div class="feature_icon">
+                                    <i class="fas fa-suitcase"></i>
+                                </div>
+                                <h5 class="custom-fs-22 custom-fw-800">
+                                    Digital Marketing
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance About  -->
+    <section class="mt-0 mb-5 pb-sm-5 py-0 finance_about">
+        <div class="container ">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="img-wrap">
+                        <img src="https://picsum.photos/650/400" class="img-fluid" alt="">
+
+                        <button type="button" class="btn play-button" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                            <i class="fas fa-play-circle "></i>
+                        </button>
+
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <video autobuffer="true" x-webkit-airplay="allow" controlslist="nodownload"
+                                            disablepictureinpicture="" class="_53mv" controls="" playinfullscreen="true"
+                                            src="https://video.fktm7-1.fna.fbcdn.net/v/t42.9040-2/80704154_684689695268243_6512437672311521280_n.mp4?_nc_cat=110&amp;ccb=1-5&amp;_nc_sid=985c63&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InN2ZV9zZCJ9&amp;_nc_ohc=LlNJmkxO4qEAX8y6NUP&amp;_nc_rml=0&amp;_nc_ht=video.fktm7-1.fna&amp;edm=AGo2L-IEAAAA&amp;oh=4fee6deddc62bc774bd871c9242ec5c7&amp;oe=61823BAB"
+                                            width="100%" height="338"></video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="custom-text-primary custom-fs-20 mb-3 custom-fw-600">Who We Are</p>
+                    <h2 class="custom-fs-47 custom-text-black custom-fw-700 mb-5 custom-b-bot">
+                        The people who deliver award winning ,global platforms.
+                    </h2>
+                    <a href="{% url 'contact' %}" class="custom-bg-primary btn-style-1 custom-fs-12">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section  -->
+    <section class="custom-bg-light-gray our_services">
+        <div class="container">
+            <div class="title">
+                <p class="custom-text-primary custom-fs-20 mb-3 custom-fw-600">Our Services</p>
+                <h2 class="custom-fs-47 custom-text-black custom-fw-700 mb-5 custom-b-bot">
+                    Making Possible
+                </h2>
+            </div>
+
+            <div class="owl-carousel custom-carousel-1">
+                {% for category in links %}
+                <div class="our_services_card p-4">
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="img-wrap">
+                                <img src="{% static 'img/1597741240.jpg' %}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <h3 class="custom-text-black custom-fs-22 custom-fw-700">
+                                {{category.name}}
+                            </h3>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <p class="custom-fs-16 custom-text-light custom-fw-500">
+
+                                {{category.description|truncatechars:60}}
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <a href="service.html" class="custom-fs-16 custom-text-light">
+                                VIEW SERVICES >>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Do Section  -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5">
+                    <div class="title">
+                        <p class="custom-text-primary custom-fs-20 mb-3 custom-fw-600">What We Provide</p>
+                        <h2 class="custom-fs-47 custom-text-black custom-fw-700 mb-5 custom-b-bot">
+                            We guarantee you that our services will set exceptional growth for your business.
+                        </h2>
+                        <a href="contact.html" class="custom-bg-primary btn-style-1">contact us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 custom-text-black">
+                    <div class="row mb-4">
+                        <div class="col-3 col-sm-2 px-0">
+                            <div class="custom-icon-box custom-text-primary">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                        </div>
+                        <div class="col-9 col-sm-10 ">
+                            <h4 class="custom-fs-22 custom-fw-700 mb-4">Business Consulting</h4>
+                            <p class="custom-text-light">
+                                We will provide you with the consulting services for  your business. We can use our experience and knowledge to make your business run smoothly. We have a market expert who will help you to know about the market.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 col-sm-2 px-0">
+                            <div class="custom-icon-box custom-text-primary">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                        </div>
+                        <div class="col-9 col-sm-10 ">
+                            <h4 class="custom-fs-22 custom-fw-700 mb-4">Products Consulting</h4>
+                            <p class="custom-text-light">
+                                Our team will help you to launch your product in the market. We have a market analyst who can present you the current market scenario and make a safe landing for your product for launching.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3 col-sm-2 px-0">
+                            <div class="custom-icon-box custom-text-primary">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                        </div>
+                        <div class="col-9 col-sm-10 ">
+                            <h4 class="custom-fs-22 custom-fw-700 mb-4">Financial Support</h4>
+                            <p class="custom-text-light">
+                                We have the policy of paying in installment which we believe helps our clients financially. There are some other policies too which we believe that the startup company will get helped. For more info regarding this we humble request you to message us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Count Up Section  -->
+    <section class="count_up">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+            {% comment %} {% for data in data %} {% endcomment %}
+                <div class="col-lg-3 col-sm-6">
+                    <div class="count_up_box text-white">
+                        <i class="fas fa-laptop-code mb-4"></i>
+                        <p class="custom-fs-47 custom-fw-700 mb-1">
+                            <span class="counter">{{object.positive_reviews}}</span><span>+</span>
+                        </p>
+                        <p>
+                            POSITIVE REVIEWS
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="count_up_box text-white">
+                        <i class="far fa-smile-beam mb-4"></i>
+                        <p class="custom-fs-47 custom-fw-700 mb-1">
+                            <span class="counter">{{object.team_members}}</span><span>+</span>
+                        </p>
+                        <p>
+                            TEAM MEMBERS
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="count_up_box text-white">
+                        <i class="far fa-flag mb-4"></i>
+                        <p class="custom-fs-47 custom-fw-700 mb-1">
+                            <span class="counter">{{object.happy_client}}</span><span>+</span>
+                        </p>
+                        <p>
+                            HAPPY CLIENTS
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="count_up_box text-white">
+                        <i class="far fa-thumbs-up mb-4"></i>
+                        <p class="custom-fs-47 custom-fw-700 mb-1">
+                            <span class="counter">{{object.completed_projects}}</span><span>+</span>
+                        </p>
+                        <p>
+                            COMPLETED PROJECTS
+                        </p>
+                    </div>
+                </div>
+            {% comment %} {% endfor %} {% endcomment %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section  -->
+    <section>
+        <div class="container">
+            <div class="text-center title-2">
+                <p class="custom-text-primary custom-fs-20 mb-3 custom-fw-600">Testimonial</p>
+                <h2 class="custom-fs-47 custom-text-black custom-fw-700 mb-5 custom-b-bot">
+                    What people say about our Services
+                </h2>
+            </div>
+
+            <div class="owl-carousel custom-carousel-2">
+            
+                {% for testimonial in testimonial %}
+                <div class="row custom-bg-light-gray p-4">
+                    <div class="col-12 col-sm-3 mb-4 mb-sm-0 d-flex align-items-center">
+                        <img src="{{testimonial.image.url}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 col-sm-9 custom-text-black">
+                        <h4 class="custom-fs-22 custom-fw-600 mb-1">
+                            {{testimonial.name}}
+                        </h4>
+                        <h6 class="custom-fs-15 custom-fw-600 mb-3">
+                            {{testimonial.position}}
+                        </h6>
+                        <p class="custom-text-gray">
+                            {{testimonial.description|truncatechars:30}}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section  -->
+    <section class="latest_project">
+        <div class="container">
+            <div class="title">
+                <p class="custom-text-primary custom-fs-20 mb-3 custom-fw-600">Our Latest Projects</p>
+                <h2 class="custom-fs-70 custom-text-black custom-fw-700 mb-5 custom-b-bot">
+                    Making Things Possible
+                </h2>
+            </div>
+
+            <div class="owl-carousel custom-carousel-3">
+            {% for project in project %}
+                <div class="card custom-text-dark project_card">
+                    <div class="project_card_img">
+                        <img src="{{project.image.url}}" class="img-fluid" alt="...">
+                        <a href="#" class="view-more">
+                            View More
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-text custom-fs-22 custom-fw-600 mb-1">{{project.title}}</h2>
+                        <p class="custom-text-gray custom-fs-16">{{project.description|truncatechars:20}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section  -->
+    <section class="our_team custom-bg-light-gray">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-md-10 px-0">
+                    <div class="title">
+                        <p class="custom-text-primary custom-fs-20 mb-3 custom-fw-600">Expert Team</p>
+                        <h2 class="custom-fs-40 custom-text-black custom-fw-700 mb-5 custom-b-bot">
+                            Gems of Kitwosd
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-md-2 d-flex align-items-end justify-content-end  ">
+                    <a href="{% url 'team' %}" class="custom-text-gray custom-fs-16">View all >></a>
+                </div>
+            </div>
+
+            <div class="owl-carousel custom-carousel-1">
+            {% for team in team %}
+                <div class="card our_team_card">
+                    <div class="social_medias">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <img src="{{team.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="custom-text-black custom-fs-22 custom-fw-700">{{team.name}}</h4>
+                        <p class="custom-fs-16 custom-text-gray">
+                            {{team.description}}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section  -->
+    <section class="latest_news">
+        <div class="container">
+            <div class="text-center title-2">
+                <p class="custom-text-primary custom-fs-20 mb-3 custom-fw-600">Latest Blogs</p>
+                <h2 class="custom-fs-47 custom-text-black custom-fw-700 mb-5 custom-b-bot">
+                    News of Tech Industry
+                </h2>
+            </div>
+            <div class="owl-carousel custom-carousel-1">
+            {% for blog in blog %}
+                <div class="card latest_news_card">
+                    <img src="{{blog.image.url}}" class="card-img-top" alt="...">
+                    <div class="card-body custom-text-light">
+                        <div class="row">
+                            <div class="col-4 d-flex align-items-center">
+                                <i class="far fa-user me-2"></i>
+                                <p class="mb-0 custom-fs-16">{{blog.created_by}}</p>
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <i class="far fa-calendar-alt me-2"></i>
+                                <p class="mb-0 custom-fs-16">{{blog.published_date}}</p>
+                            </div>
+                            <div class="col-12 my-3">
+                                <a href="news.html" class="custom-fs-22 custom-text-dark custom-fw-700">{{blog.title}}</a>
+                                <hr>
+                            </div>
+                            <div class="col-12">
+                                <a href="/blog/{{blog.blog_slug}}" class="custom-text-light custom-fs-16">Read More >></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner section  -->
+
+
+    <!-- Contact Us Section  -->
+    <section class="custom-bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 mb-3">
+                    <h2 class="custom-fs-32 custom-fw-700 text-white text-center text-lg-start">
+                        Do you have any query? Let's clear it now.
+                    </h2>
+                </div>
+                <div class="col-lg-3 d-flex justify-content-lg-end justify-content-center">
+                    <a href="{% url 'contact' %}" class="custom-bg-black btn-style-1">contact us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>About-Us</title> {% endblock title %}
+
+{% block content %}
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">Our Packages</p>
+                <h1 class="custom-fs-39 custom-fw-700">Choose a package which suits you best</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item">Packages</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Section  -->
+    <section>
+        <div class="container">
+            <div class="row">
+            {% for package in package %}
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card  package_card pb-4">
+                        <div class="package_heading p-4">
+                            <h3 class="custom-fs-32 custom-fw-700">
+                                {{package.title}}
+                            </h3>
+                            <p class="custom-text-light custom-fs-16 mb-0">Featured Package</p>
+                        </div>
+                        <div class="package_price p-4">
+                            {{package.price}}
+                        </div>
+                        <ul class="ps-0 custom-text-light custom-fs-16 p-4">
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <a href="{% url 'package-order' %}" class="btn-style-1 custom-bg-primary mx-auto">place order</a>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock content%}

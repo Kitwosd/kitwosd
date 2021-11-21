@@ -1,0 +1,4 @@
+{% comment %} <a class="dropdown-item mb-3" href="{% url 'blog' %}">RSS News</a> {% endcomment %}
+525*590
+&laquo;
+&raquo;

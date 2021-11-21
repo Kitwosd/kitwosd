@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>About-Us</title> {% endblock title %}
+
+{% block content %}
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">Request A Quote</p>
+                <h1 class="custom-fs-39 custom-fw-700">Have a project ? Send us a quote</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item">Quote Page</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section  -->
+    <section>
+        <div class="container">
+            <form action='{% url 'quote' %}' class="row" method="POST" enctype ="multipart/form-data">
+            {% csrf_token %}
+                <div class="form-wrap col-md-6">
+                    <label for="name" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Name
+                        <span class="text-danger">**</span></label>
+                    <input type="text" id='name' name="fullName" class="form-control mb-3 p-3 rounded-0" required
+                        placeholder="Enter Name">
+                </div>
+                <div class="form-wrap col-md-6">
+                    <label for="email" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Email <span
+                            class="text-danger">**</span></label>
+                    <input type="email" id='email' name="emailAddress" class="form-control mb-3 p-3 rounded-0"
+                        placeholder="Enter Email Address">
+                </div>
+                <div class="form-wrap col-md-6">
+                    <label for="number" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Contact Number
+                        <span class="text-danger">**</span></label>
+                    <input type="number" id='number' name="phoneNumber" class="form-control mb-3 p-3 rounded-0" required
+                        placeholder="Enter Contact Number">
+                </div>
+                <div class="form-wrap col-md-6">
+                    <label for="country" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Country <span
+                            class="text-danger">**</span></label>
+                    <input type="text" id='country' name="countryName" class="form-control mb-3 p-3 rounded-0"
+                        placeholder="Enter Country Name">
+                </div>
+                <div class="form-wrap col-md-6">
+                    <label for="Budget" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Approximate Budget
+                        <span class="text-danger">**</span></label>
+                    <select name="Budget" id="Budget" name="budget" class="form-control mb-3 p-3 rounded-0">
+                        <option value="#">Select Approximate Budget</option>
+                        <option value="#">Less than Rs 100000</option>
+                        <option value="#">Rs 100000 to Rs 200000</option>
+                    </select>
+                </div>
+                <div class="form-wrap col-md-6">
+                    <label for="social" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Skype ID / Whatsapp
+                        Number
+                        <span class="text-danger">**</span></label>
+                    <input type="text" id='social' name="whatsappNumber" class="form-control mb-3 p-3 rounded-0"
+                        placeholder="Whatsapp Number">
+                </div>
+                <div class="form-wrap col-12 mb-3">
+                    <label for="choices" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Select Your Choices
+                        <span class="text-danger">**</span></label>
+                    <br>
+                    <input type="checkbox" name="choices" id="choices" class="me-2"> Lorem, ipsum.
+                    {% comment %} <input type="checkbox" name="choices" id="choices" class="me-2"> Lorem, ipsum.
+                    <input type="checkbox" name="choices" id="choices" class="me-2"> Lorem, ipsum.
+                    <input type="checkbox" name="choices" id="choices" class="me-2"> Lorem, ipsum. {% endcomment %}
+                </div>
+                <div class="form-wrap col-12 ">
+                    <label for="Details" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Details
+                        <span class="text-danger">**</span></label>
+                    <br>
+                    <div class="form-floating">
+                        <textarea class="form-control mb-3" name="details" placeholder="Leave a comment here" id="Details"
+                            style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Project Description</label>
+                    </div>
+                </div>
+                <div class="form-wrap col-12">
+                    <label for="file" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">NDA File <span
+                            class="text-danger">**</span></label>
+                    <input type="file" id='file' name="File" class="form-control border-0 mb-3 p-3 rounded-0"
+                        placeholder="Enter Zip Code">
+                    <p class="text-warning ">** Only doc, docx, pdf, rtf, txt, zip, rar files are allowed
+                    </p>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-style-1 custom-bg-primary mx-auto">submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+{% endblock content%}

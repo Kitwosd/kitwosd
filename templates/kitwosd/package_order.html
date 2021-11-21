@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>About-Us</title> {% endblock title %}
+
+{% block content %}
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">Packages Order</p>
+                <h1 class="custom-fs-39 custom-fw-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}>Home</a></li>
+                        <li class="breadcrumb-item">Package Order</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Order Section  -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-3">
+                    <form action="{% url 'package-order' %}" class="row" method="POST" enctype ="multipart/form-data">
+                    {% csrf_token %}
+                        <div class="form-wrap col-md-6">
+                            <label for="name" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Name
+                                <span class="text-danger">**</span></label>
+                            <input type="text" id='name' name="fullName" class="form-control mb-3 p-3 rounded-0" required
+                                placeholder="Enter Name">
+                        </div>
+                        <div class="form-wrap col-md-6">
+                            <label for="email" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Email <span
+                                    class="text-danger">**</span></label>
+                            <input type="email" id='email' name="emailAddress" class="form-control mb-3 p-3 rounded-0"
+                                placeholder="Enter Email Address">
+                        </div>
+                        <div class="form-wrap col-md-6">
+                            <label for="number" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Contact Number
+                                <span class="text-danger">**</span></label>
+                            <input type="number" id='number' name="phone_number" class="form-control mb-3 p-3 rounded-0" required
+                                placeholder="Enter Contact Number">
+                        </div>
+                        <div class="form-wrap col-md-6">
+                            <label for="country" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Country <span
+                                    class="text-danger">**</span></label>
+                            <input type="text" id='country' name="country" class="form-control mb-3 p-3 rounded-0"
+                                placeholder="Enter Country Name">
+                        </div>
+                        <div class="form-wrap col-md-6">
+                            <label for="city" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">City
+                                <span class="text-danger">**</span></label>
+                            <input type="text" id='city' name="city" class="form-control mb-3 p-3 rounded-0" required
+                                placeholder="Enter City">
+                        </div>
+                        {% comment %} <div class="form-wrap col-md-6">
+                            <label for="zipCode" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Zip Code
+                                <span class="text-danger">**</span></label>
+                            <input type="number" id='zipCode' name="zipCode" class="form-control mb-3 p-3 rounded-0"
+                                placeholder="Enter Zip Code">
+                        </div> {% endcomment %}
+                        <div class="form-wrap col-12">
+                            <label for="file" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">NDA File <span
+                                    class="text-danger">**</span></label>
+                            <input type="file" id='file' name="packageFile" class="form-control border-0 mb-3 p-3 rounded-0"
+                                placeholder="Enter Zip Code">
+                            <p class="text-warning ">** Only doc, docx, pdf, rtf, txt, zip, rar files are allowed
+                            </p>
+                        </div>
+                        {% comment %} <div class="row">
+                            <div class="form-wrap col-lg-6">
+                                <label for="payment" class="custom-fs-14 custom-text-light custom-fw-600 mb-2">Pay Via
+                                    <span class="text-danger">**</span></label>
+                                <select name="payment" id="payment" class="form-control mb-3 p-3 rounded-0">
+                                    <option value="#">Esewa</option>
+                                    <option value="#">Khalti</option>
+                                </select>
+                            </div>
+                        </div> {% endcomment %}
+                        {% comment %} <div class="form-wrap col-md-6">
+                            <input type="number" id='phonenumber' class="form-control mb-3 p-3 rounded-0"
+                                placeholder="Phone">
+                        </div> {% endcomment %}
+                        {% comment %} <div class="form-wrap col-6">
+                            <input type="text" id='address' class="form-control mb-3 p-3 rounded-0"
+                                placeholder="Address">
+                        </div> {% endcomment %}
+                        <div class="col-12">
+                            <button class="btn btn-style-1 custom-bg-primary">submit</button>
+                        </div>
+                    </form>
+                </div>
+                {% comment %} <div class="col-lg-4 ">
+                    <div class="card  package_card pb-4">
+                        <div class="package_heading p-4">
+                            <h3 class="custom-fs-32 custom-fw-700">
+                                Digital Marketing Accelerate Package
+                            </h3>
+                            <p class="custom-text-light custom-fs-16 mb-0">Featured Package</p>
+                        </div>
+                        <div class="package_price p-4">
+                            100000.00 Rs
+                        </div>
+                        <ul class="ps-0 custom-text-light custom-fs-16 p-4">
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                            <li class="mb-3">Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <a href="package-order.html" class="btn-style-1 custom-bg-primary mx-auto">place order</a>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content%}

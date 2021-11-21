@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>About-Us</title> {% endblock title %}
+
+{% block content %}
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">Blog Details</p>
+                <h1 class="custom-fs-39 custom-fw-700">Lorem ipsum dolor sit.</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item">Blog Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Section  -->
+    <section class="blog-read">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-3 ">
+                    <div class="blog-img mb-4">
+                        <img src="{{blog.image.url}}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="custom-fs-12 custom-text-light mb-3">
+                        {{blog.published_date}}
+                    </div>
+                    <h2 class="custom-fs-30 custom-fw-700 mb-4">{{blog.title}}</h2>
+                    <p class="custom-fs-16">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio exercitationem repellat
+                        distinctio, aliquid inventore quia explicabo tenetur voluptatem atque? Commodi assumenda a porro
+                        aut. Autem odio, nisi laboriosam consequuntur maiores sed quasi repellendus dolorem, aut culpa
+                        quae. Possimus esse consequatur nostrum itaque, aliquam, amet minus exercitationem suscipit,
+                        veniam obcaecati nam. Illum natus neque nisi labore? Laudantium alias eius numquam optio
+                        voluptatibus at natus quaerat eaque nostrum quae veniam, voluptas est iste similique esse
+                        reiciendis earum! Similique laboriosam quibusdam animi? Quae accusantium at a eveniet quos minus
+                        id aperiam facilis molestias, nostrum atque distinctio aliquam, praesentium earum nam non alias
+                        modi?
+                    </p>
+                    <p class="custom-fs-16">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio exercitationem repellat
+                        distinctio, aliquid inventore quia explicabo tenetur voluptatem atque? Commodi assumenda a porro
+                        aut. Autem odio, nisi laboriosam consequuntur maiores sed quasi repellendus dolorem, aut culpa
+                        quae. Possimus esse consequatur nostrum itaque, aliquam, amet minus exercitationem suscipit,
+                        veniam obcaecati nam. Illum natus neque nisi labore? Laudantium alias eius numquam optio
+                        voluptatibus at natus quaerat eaque nostrum quae veniam, voluptas est iste similique esse
+                        reiciendis earum! Similique laboriosam quibusdam animi? Quae accusantium at a eveniet quos minus
+                        id aperiam facilis molestias, nostrum atque distinctio aliquam, praesentium earum nam non alias
+                        modi?
+                    </p>
+
+                    <div class="d-flex my-4 shares custom-fs-14">
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Share </a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i> Tweet </a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i> Linkedin </a>
+                    </div>
+
+                    <p class="mb-1 text-center custom-fw-700">What do you think?</p>
+                    <p class=" text-center">{{blog.vote}} Responses</p>
+
+                    {% comment %} <div class="d-flex my-4 reacts justify-content-center custom-fs-14">
+                        <a href="#" class="custom-text-light">
+                            <img src="img/upvote-512x512.png" class="img-fluid" alt="">
+                            <p>Upvote</p>
+                        </a>
+                        <a href="#" class="custom-text-light">
+                            <img src="img/upvote-512x512.png" class="img-fluid" alt="">
+                            <p>Upvote</p>
+                        </a>
+                        <a href="#" class="custom-text-light">
+                            <img src="img/upvote-512x512.png" class="img-fluid" alt="">
+                            <p>Upvote</p>
+                        </a>
+                        <a href="#" class="custom-text-light">
+                            <img src="img/upvote-512x512.png" class="img-fluid" alt="">
+                            <p>Upvote</p>
+                        </a>
+                        <a href="#" class="custom-text-light">
+                            <img src="img/upvote-512x512.png" class="img-fluid" alt="">
+                            <p>Upvote</p>
+                        </a>
+                        <a href="#" class="custom-text-light">
+                            <img src="img/upvote-512x512.png" class="img-fluid" alt="">
+                            <p>Upvote</p>
+                        </a>
+                    </div> {% endcomment %}
+
+                    {% comment %} <form action="#">
+                        <div class="form-wrap">
+                            <textarea name="comment" class="form-control"></textarea>
+                        </div>
+                    </form> {% endcomment %}
+
+                </div>
+                <div class="col-lg-4">
+                    {% comment %} <div class="custom-bg-light-gray p-4 mb-3">
+                        <form action="#" class="d-flex ">
+                            <input type="search" name="search_services" placeholder="Search Services"
+                                class="form-control rounded-0 border-0 p-3">
+                            <button class="btn custom-bg-primary rounded-0 text-white px-4">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div> {% endcomment %}
+
+                    <div class="custom-bg-light-gray px-4 py-5 my-3">
+                        <h5 class="custom-fs-22 custom-text-dark custom-fw-700 mb-4">Categories</h5>
+                        <ul class="ps-0">
+                            <li class="mb-2"><a href="{% url 'portfolio' %}" class="custom-text-black "><i
+                                        class="fas fa-caret-right custom-text-primary"></i> All</a>
+                                <hr>
+                            </li>
+                            {% for category in links %}
+                                <li class="mb-2"><a href="{{category.get_url}}" class="custom-text-black "><i
+                                            class="fas fa-caret-right custom-text-primary"></i> {{category.name}}</a>
+                                    <hr>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                    <div class="custom-bg-light-gray px-4 py-5 my-3">
+                        <h5 class="custom-fs-22 custom-text-dark custom-fw-700 mb-4">Archive</h5>
+                        <ul class="ps-0">
+                            <li class="mb-2"><a href="{% url 'portfolio' %}" class="custom-text-black "><i
+                                        class="fas fa-caret-right custom-text-primary"></i> All</a>
+                                <hr>
+                            </li>
+                            {% for category in links %}
+                            <li class="mb-2"><a href="{{category.get_url}}" class="custom-text-black "><i
+                                        class="fas fa-caret-right custom-text-primary"></i> {{category.name}}</a>
+                                <hr>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} <title>About-Us</title> {% endblock title %}
+
+{% block content %}
+
+
+    <!-- Hero Section  -->
+    <section class="hero_2">
+        <div class="container">
+            <div class="hero-content">
+                <p class="custom-fs-20 custom-fw-600 mb-3">Team Members</p>
+                <h1 class="custom-fs-39 custom-fw-700">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="breadcrumb-item">Team Members</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section  -->
+    <section>
+        <div class="container">
+            <div class="row">
+            {% for team in team %}
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <div class="card our_team_card">
+                        <div class="social_medias">
+                            <a href="https://www.facebook.com/theonlybhishan"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <img src="{{team.image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h4 class="custom-text-black custom-fs-22 custom-fw-700">{{team.name}}</h4>
+                            <p class="custom-fs-16 custom-text-gray">
+                                {{team.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock content%}

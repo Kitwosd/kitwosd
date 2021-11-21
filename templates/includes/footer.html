@@ -1,0 +1,65 @@
+    <!-- Footer Section  -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <a class="text-white custom-fs-20 custom-fw-700 footer-brand " href="#">Kitwosd</a>
+                    <p class="custom-text-light mt-4">
+                        Kitwosd  IT Support Center is a software company located in Gwarko, Lalitpur.
+                         It provides Web, App and Software Development along with the Digital Marketing services.
+
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 custom-text-light mb-3">
+                    <h4 class="custom-fs-22 custom-text-white custom-fw-700 mb-4">Contact Us</h4>
+                    <p>
+                        Do you have any query? Let's clear it now.
+                    </p>
+                    <p>
+                        Phone: <span>01-5910117 / 9801095004</span>
+                    </p>
+                    <p>
+                        Email: <span>kitwosd4u@gmail.com</span>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <h4 class="custom-fs-22 custom-text-white custom-fw-700 mb-4">Useful Links</h4>
+                    <ul class="ps-0">
+                        <li class="mb-3"> <a href="{% url 'service' %}" class="custom-fs-16 custom-text-light">Web Design</a>
+                        </li>
+                        <li class="mb-3"> <a href="{% url 'blog' %}" class="custom-fs-16 custom-text-light">Blogs</a></li>
+                        <li class="mb-3"> <a href="{%url 'services'%}" class="custom-fs-16 custom-text-light">Company</a></li>
+                        <li class="mb-3"> <a href="{% url 'career' %}" class="custom-fs-16 custom-text-light">Career</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 custom-text-light mb-3">
+                    <h4 class="custom-fs-22 custom-text-white custom-fw-700 mb-4">Newsletter</h4>
+                    <p class="mb-3">
+                        Subscribe to get Latest News, Offers and connect with is.
+                    </p>
+                    <form action="{% url 'subscribe' %}" method="POST">
+                    {% csrf_token %}
+                        <input type="email" name="subscribeMail" class="form-control mb-3 px-3 py-3 rounded-0"
+                            placeholder="Enter Email Address" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <button class="btn-style-1 custom-bg-primary rounded-pill btn">subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr class="custom-bg-light">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-lg-6 text-center text-lg-start my-3">
+                    <p class="mb-0 custom-fs-600">Copyright © 2019. All rights reserved</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="social_medias my-3">
+                        <a href="https://www.facebook.com/kitwosds"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/theonlybhishanpoudel/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
